@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prjct 4</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function() {
+            let img = document.querySelector('.img');
+            let query = document.querySelector('.query');
+            
+            img.onclick = function() {
+                if (query.value === '') {
+                    // Handle the case when query value is empty (optional)
+                } else {
+                    let url = 'https://www.google.com/search?q=' + encodeURIComponent(query.value);
+                    window.open(url, '_self');
+                }
+            }
+        }
+        function search(ele) {
+            if(event.key === 'Enter' && ele.value === '') {
+                     
+            } else if (event.key === 'Enter') {
+                let clickrl = 'https://www.google.com/search?q=' + ele.value;   
+                window.open(clickrl, '_self')
+            }
+        }
+    </script>
+</head>
+<body>
+   <div class="container">
+        <div class="searchB">
+            <input class="query" type="text" value="" placeholder="Search..." onkeydown="search(this)">
+            <img class="img" src="https://lh3.googleusercontent.com/pw/AIL4fc_e-LOhOtbBJ-MM0lx2zzNwxpLa7xfRUFWgkwyHCLE7ZE6LcXjUOfSlsZf6U-e_CL8rXLTaTWCA12UZIPRUaRigA4gSm7hHfFG7ZQvq0qHHhnU5fBU=w2400" alt="luffy-minimalistic.png">
+            <img class="img2" src="https://lh3.googleusercontent.com/pw/AIL4fc9nNJ5QgUQ3xHgyvKSXWasmoADx58UurUGT_f-qw5jdcsY4TfX7HOVCrDZXh5Z7ibxcAfkL0XFvOMQkiu9h1Djx88PF2l1eAeRhsk_LeBcbLuMOvCE=w2400" alt="search-icon.png">
+        </div>
+   </div>
+    
+</body>
+</html>
